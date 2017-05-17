@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  vars = 'This is my title var';
 
   public color = "papaya";
 

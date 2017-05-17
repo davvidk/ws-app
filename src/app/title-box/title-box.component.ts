@@ -10,8 +10,6 @@ export class TitleBoxComponent implements OnInit {
   @Input()
   public title: string;
 
-  public vars: string = "Hello";
-
   constructor() { }
 
   ngOnInit() {
