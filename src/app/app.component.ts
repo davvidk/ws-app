@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'app works!';
 
   public color = "red";
+
+    gotTitle(event: any) {
+    console.log(event);
+    }
 }
