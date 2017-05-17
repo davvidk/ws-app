@@ -10,7 +10,7 @@ export class TitleBoxComponent implements OnInit {
   @Input()
   public title: string;
 
-  public var: string = "Hello";
+  public vars: string = "Hello";
 
   constructor() { }
 

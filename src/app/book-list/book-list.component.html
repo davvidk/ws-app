@@ -1,7 +1,14 @@
-<p>
-  Books:</p>
-<ul>
-  <li *ngFor="let book of books">
-    {{ book.title }}
-  </li>
-</ul>
+<p>Books:</p>
+
+<table style="width:100%">
+<tr>
+  <th>Title</th>
+  <th>subtitle</th>
+  <th>isbn</th>
+</tr>
+<tr *ngFor="let book of books">
+  <td> {{ book.title }} </td>
+  <td> {{book.subtitle}} </td>
+  <td> {{book.isbn}} </td>
+</tr>
+</table>
