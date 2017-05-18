@@ -19,6 +19,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
       console.log('ISBN:', params.isbn)
       this.bookData.getBookByIsbn(params.isbn).subscribe(book => this.book = book);
     });
+    // In der Musterlösung mit einer Mergemap. Ermöglicht die UnSubscribtion beider Observerables
   }
 
   ngOnDestroy(){

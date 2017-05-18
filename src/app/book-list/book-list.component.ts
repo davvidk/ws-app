@@ -24,5 +24,4 @@ export class BookListComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
     console.log("BookListComponent unsubscribed")
   }
-
 }
