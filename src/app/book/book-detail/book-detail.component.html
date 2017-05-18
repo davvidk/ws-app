@@ -1,0 +1,23 @@
+<h1>Book Details:</h1>
+<div *ngIf="book">
+  <ul>
+    <li>title:
+      <p>{{book.title}}</p>
+    </li>
+    <li>subtitle:
+      <p>{{book.subtitle}}</p>
+    </li>
+    <li>isbn:
+      <p>{{book.isbn}}</p>
+    </li>
+    <li>abstract:
+      <p>{{book.abstract}}</p>
+    </li>
+    <li>pages: 
+      <p>{{book.numPages}}</p>
+    </li>
+    <li>Author:
+      <p>{{book.author}}</p>
+    </li>
+  </ul>
+</div>
