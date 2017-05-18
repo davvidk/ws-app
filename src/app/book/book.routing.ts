@@ -1,20 +1,21 @@
 import { Routes, RouterModule } from '@angular/router';
 import { BookListComponent } from './book-list/book-list.component';
+import { BookComponent } from './book.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 
 
 const routes: Routes = [
     {
-        path: 'books',
-        component: BookListComponent
-    },
-    {
         path: '',
-        pathMatch: 'full',
-        redirectTo: '/books'
-    },
-    {   path: 'books/:isbn',
-        component: BookDetailComponent 
+        component: BookComponent,
+        children: [{
+            path: '',
+            component: BookListComponent
+            }, {
+            path: ':isbn',
+            component: BookDetailComponent
+        }
+        ]
     }
 ];
 
