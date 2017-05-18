@@ -9,6 +9,8 @@
 <tr *ngFor="let book of books">
   <td> {{ book.title }} </td>
   <td> {{book.subtitle}} </td>
-  <td> {{book.isbn}} </td>
+  <td>
+    <a [routerLink]="['/books', book.isbn]">{{book.isbn}}</a>
+  <td>
 </tr>
 </table>
