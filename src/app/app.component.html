@@ -5,7 +5,6 @@
 
   <mouse-cursor></mouse-cursor>
  
-  <title-box (titleClicked)="gotTitle($event)" title="Hier ist ein Titel"></title-box>
-  <title-box [title]="vars"></title-box>
+  <title-box (titleClicked)="gotTitle($event)" [title]="titleVar"></title-box>
 
-  <book-list></book-list>
+  <router-outlet></router-outlet>

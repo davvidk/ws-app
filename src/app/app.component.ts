@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'app works!';
-  vars = 'This is my title var';
+  public title = 'app works!';
+  public titleVar = 'This is my favorite book list';
 
   gotTitle(event: any) {
     console.log(event);
