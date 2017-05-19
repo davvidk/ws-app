@@ -3,7 +3,6 @@ import { Book } from './../shared/book';
 import { BookDataService } from './../shared/book-data.service';
 import { Subscription } from 'rxjs/subscription'
 
-
 @Component({
   selector: 'book-list',
   templateUrl: './book-list.component.html',

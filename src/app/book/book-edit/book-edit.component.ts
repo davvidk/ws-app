@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BookDataService } from './../shared/book-data.service';
 import { ActivatedRoute } from '@angular/router';
-import { Book } from './../shared/book';
+import { Book } from '../shared/book';
+import { Subscription } from 'rxjs/subscription'
 
 
 @Component({
@@ -11,6 +12,7 @@ import { Book } from './../shared/book';
 })
 export class BookEditComponent implements OnInit {
 
+  private subscription: Subscription;
 
   private book: Book;
   constructor(private route: ActivatedRoute, private bookData: BookDataService) { }
@@ -23,7 +25,8 @@ export class BookEditComponent implements OnInit {
     // In der Musterlösung mit einer Mergemap. Ermöglicht die UnSubscribtion beider Observerables
   }
 
-  save(){
-    console.log("saved");
+  save(book: Book) {
+    this.subscription = this.bookData.addBook(book).subscribe(book => console.log('book.saved: ', book.title));
+    console.log("Submit new book: ", book);
   }
 }
