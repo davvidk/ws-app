@@ -26,7 +26,7 @@ export class BookEditComponent implements OnInit {
   }
 
   save(book: Book) {
-    this.subscription = this.bookData.addBook(book).subscribe(book => console.log('book.saved: ', book.title));
+    this.subscription = this.bookData.updateBook(book).subscribe(book => console.log('book.saved: ', book.title));
     console.log("Submit new book: ", book);
   }
 }

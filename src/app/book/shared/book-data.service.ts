@@ -15,7 +15,7 @@ export class BookDataService {
   }
 
   getBookByIsbn(isbn: string): Observable<Book> {
-    return this.http.get('http://localhost:4730/books/'+isbn).map(response => response.json());
+    return this.http.get(`http://localhost:4730/books/${isbn}`).map(response => response.json());
   }
 
   addBook(book: Book): Observable<Book> {
@@ -23,6 +23,6 @@ export class BookDataService {
   }
 
   updateBook(book: Book): Observable<Book> {
-    return this.http.post('http://localhost:4730/books/'+book.isbn, book).map(response => response.json());
+    return this.http.put('http://localhost:4730/books/'+book.isbn, book).map(response => response.json());
   }
 }
