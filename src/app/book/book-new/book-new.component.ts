@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Validators, FormBuilder, FormGroup} from '@angular/forms';
-import {Book} from '../shared/book';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Book } from '../shared/book';
 import { BookDataService } from './../shared/book-data.service';
 import { Subscription } from 'rxjs/subscription'
 
@@ -16,26 +16,26 @@ export class BookNewComponent implements OnInit {
 
   private subscription: Subscription;
 
-  constructor(private fb: FormBuilder, private bookData: BookDataService) { 
+  constructor(private fb: FormBuilder, private bookData: BookDataService) {
     this.form = this.fb.group(
-    {
+      {
         title: ['', Validators.required],
         subtitle: ['', Validators.required],
         isbn: ['', Validators.compose([Validators.required, Validators.minLength(11)])],
         author: ['', Validators.compose([Validators.required, Validators.minLength(1)])]
-    });
+      });
   }
 
   ngOnInit() {
 
   }
 
-  onSubmit(){
-    const {title, isbn, author, subtitle} = this.form.value; 
+  onSubmit() {
+    const { title, isbn, author, subtitle } = this.form.value;
     const book: Book = {
       isbn: '',
       title,
-      author, 
+      author,
       subtitle: subtitle,
       abstract: '',
       numPages: 135,
@@ -46,7 +46,7 @@ export class BookNewComponent implements OnInit {
     }
 
     console.log("Submit new book: ", book);
-       this.subscription = this.bookData.addBook(book).subscribe(book => console.log('book.saved: ',book.title));
-}
+    this.subscription = this.bookData.addBook(book).subscribe(book => console.log('book.saved: ', book.title));
+  }
 
 }

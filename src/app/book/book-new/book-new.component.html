@@ -1,7 +1,9 @@
+
+<!-- Reactive-Forms oder Model-Driven-Forms --> 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-   Title: <input type="text" formControlName="title"><br>
+   Title: <input type="text" name="title" formControlName="title"><br>
    Subtitle: <input type="text" formControlName="title"><br>
    ISBN: <input type="text" formControlName="isbn"><br>
    Author: <input type="text" formControlName="author"><br>
-  <input type="submit" value="Submit">
+  <input type="submit" [disabled]="!form.valid" value="Submit">
 </form>
