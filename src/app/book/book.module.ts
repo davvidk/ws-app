@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BookComponent } from './book.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { ConfirmCandeactivateGuardService } from './shared/confirm-candeactivate-guard.service';
+
 
 import { BookDataService } from './shared/book-data.service';
 import { routing } from './book.routing';
@@ -12,7 +14,10 @@ import { routing } from './book.routing';
     CommonModule,
     routing
   ],
-  providers: [BookDataService],
+  providers: [
+    BookDataService,
+    ConfirmCandeactivateGuardService,
+    ],
   declarations:
   [BookComponent,
     BookListComponent,
