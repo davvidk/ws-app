@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Install  Book-Monkey API with `npm i -g @angular/cli bookmonkey-api`. Start `bookmonkey-api` prior runnning the next step.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
